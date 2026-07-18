@@ -2,6 +2,7 @@ package com.hyunu.springcore;
 
 import com.hyunu.springcore.discount.DiscountPolicy;
 import com.hyunu.springcore.discount.FixDiscountPolicy;
+import com.hyunu.springcore.discount.RateDiscountPolicy;
 import com.hyunu.springcore.member.MemberService;
 import com.hyunu.springcore.member.MemberServiceImpl;
 import com.hyunu.springcore.member.MemoryMemberRepository;
@@ -23,7 +24,7 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
 }
