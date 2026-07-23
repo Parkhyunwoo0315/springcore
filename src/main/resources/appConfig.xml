@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        https://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="memberService" class="com.hyunu.springcore.member.MemberServiceImpl">
+        <constructor-arg ref="memberRepository"/>
+    </bean>
+
+    <bean id="memberRepository" class="com.hyunu.springcore.member.MemoryMemberRepository"/>
+
+    <bean id="orderService" class="com.hyunu.springcore.order.OrderServiceImpl">
+        <constructor-arg ref="memberRepository"/>
+        <constructor-arg ref="discountPolicy"/>
+    </bean>
+
+    <bean id="discountPolicy" class="com.hyunu.springcore.discount.RateDiscountPolicy"/>
+
+</beans>
