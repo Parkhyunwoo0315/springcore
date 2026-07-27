@@ -2,7 +2,10 @@ package com.hyunu.springcore.discount;
 
 import com.hyunu.springcore.member.Grade;
 import com.hyunu.springcore.member.Member;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;
