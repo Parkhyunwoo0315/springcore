@@ -1,10 +1,10 @@
-package com.hyunu.springcore.order;
+package com.hyunu.springcore;
 
-import com.hyunu.springcore.AppConfig;
 import com.hyunu.springcore.member.Grade;
 import com.hyunu.springcore.member.Member;
 import com.hyunu.springcore.member.MemberService;
-import com.hyunu.springcore.member.MemberServiceImpl;
+import com.hyunu.springcore.order.Order;
+import com.hyunu.springcore.order.OrderService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
