@@ -1,11 +1,15 @@
 package com.hyunu.springcore.discount;
 
+import com.hyunu.springcore.annotation.MainDiscountPolicy;
 import com.hyunu.springcore.member.Grade;
 import com.hyunu.springcore.member.Member;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@MainDiscountPolicy
+//@Primary 우선순위 설정
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;
