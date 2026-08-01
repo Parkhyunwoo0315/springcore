@@ -12,8 +12,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Getter
-//@Setter
+@Getter
+@Setter
 //@RequiredArgsConstructor // final이 붙은 생성자 자동 생성
 public class OrderServiceImpl implements OrderService{
 
